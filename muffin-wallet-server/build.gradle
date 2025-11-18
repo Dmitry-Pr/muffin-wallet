@@ -29,6 +29,15 @@ test {
 }
 
 jib {
+    from {
+        image = 'eclipse-temurin:21-jre'
+        platforms {
+            platform {
+                architecture = 'arm64'
+                os = 'linux'
+            }
+        }
+    }
     to {
         image = 'ghcr.io/' + findProperty('ghcr.repository') + '/' + findProperty('rootProject.name')
     }
