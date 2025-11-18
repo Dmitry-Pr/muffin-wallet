@@ -1,0 +1,8 @@
+releases:
+  - name: muffin-currency
+    chart: git::https://github.com/Dmitry-Pr/muffin-currency.git@muffin-currency-chart?ref=main
+
+  - name: muffin-wallet
+    chart: git::https://github.com/Dmitry-Pr/muffin-wallet.git@muffin-wallet-chart?ref=main
+    needs:
+      - muffin-currency
